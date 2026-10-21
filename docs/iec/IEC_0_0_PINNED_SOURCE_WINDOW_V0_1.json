@@ -1,0 +1,198 @@
+{
+  "schema": "iec-pinned-source-window/v0.1",
+  "status": "frozen",
+  "date": "2026-07-28",
+  "frozen_at": "2026-07-29",
+  "closure_claim": 0,
+  "disposition": "Reepoch",
+  "theory_lineage": {
+    "foundation": "MST-NF",
+    "runtime": "Residua",
+    "closure_checker": "RCC",
+    "theoretical_references": [
+      "IET",
+      "CRT"
+    ],
+    "normalized_precedents": [
+      "IET-NF",
+      "CRT-NF"
+    ],
+    "iec_nf_status": "not_assumed_must_be_earned_by_genuine_residual"
+  },
+  "repositories": {
+    "mst_nf_and_nf_proofs": {
+      "repository": "github-repository-id:1227901578",
+      "commit": "5c26dd79e1aa5bcc748b74e1dbec5088c1a9be41",
+      "artifacts": [
+        {
+          "path": "docs/CRT_NF_SOURCE_OF_TRUTH_INDEX.md",
+          "blob_sha": "e9a978454ecb70de86f8da5c94584703518ca203",
+          "authority": "source_of_truth_index"
+        },
+        {
+          "path": "docs/IETNF_SCOPE.md",
+          "blob_sha": "9dbd0b6dfb62fbe542e45d81bcd88cd1d570dbbb",
+          "authority": "scope_and_footprint_ledger"
+        },
+        {
+          "path": "lean/methodology/GenericResidueExhaustionSchemaMWE.lean",
+          "blob_sha": "3001fe7e19bf0c8358bd83f1381122747e23344e",
+          "authority": "lean_foundation"
+        },
+        {
+          "path": "lean/core/MSTNFObjectMWE.lean",
+          "blob_sha": "34520e05857aefebea62ddd370e227e16ce4818d",
+          "authority": "lean_foundation"
+        },
+        {
+          "path": "lean/crt/IETNFFromMSTNFMWE.lean",
+          "blob_sha": "20923ba574108cf9d23d3282c8c18cf8b84d426f",
+          "authority": "lean_normalized_precedent"
+        },
+        {
+          "path": "lean/crt/CRTAxesMachineVerdictMWE.lean",
+          "blob_sha": "3065a170347019124ee7d156d301df300d039734",
+          "authority": "lean_axis_verdict"
+        },
+        {
+          "path": "lean/fdt/CRTScopedFinalNoFourthComplete.lean",
+          "blob_sha": "d0aeb1a005dbc0f0fd4ee13a4276eff0b2ef32d4",
+          "authority": "lean_scoped_modeling_completeness"
+        }
+      ],
+      "repository_locator": {
+        "kind": "github_repository_id",
+        "repository_id": 1227901578,
+        "owner_id": 643083,
+        "human_provenance": "docs/iec/IEC_0_0_UPSTREAM_CLAIM_MATRIX_V0_1.md"
+      }
+    },
+    "residua_runtime_and_rcc": {
+      "repository": "minustwo/residua",
+      "commit": "dbd3f4b5405db49164f84f399733078c3e11ba63",
+      "artifacts": [
+        {
+          "path": "docs/SPEC.md",
+          "blob_sha": "97d714061f8ad24aac6f740eb7d5b3c8c0e7199e",
+          "authority": "runtime_semantics_pointer"
+        },
+        {
+          "path": "docs/ARCHITECTURE.md",
+          "blob_sha": "eec3e69870b110adb478e9e93873cf91344bc8ae",
+          "authority": "runtime_architecture_pointer"
+        },
+        {
+          "path": "docs/METHOD_FORMAL_THEORY_CONSTRUCTION.md",
+          "blob_sha": "2d69bc719e2667d9f5f4651e8d71006012a958a5",
+          "authority": "formalization_method"
+        },
+        {
+          "path": "docs/ADR_SELF_MEASUREMENT_AND_EXECUTION_BINDING.md",
+          "blob_sha": "1b7dbe1a193c0cb0a0aee5d6a872a2f63f67352f",
+          "authority": "operational_counterexample_source"
+        },
+        {
+          "path": "coordination/ledger/graph-test-0727.jsonl",
+          "blob_sha": "a04a91396e474c4ebffe5487155f7c71c617ad53",
+          "authority": "content_addressed_operational_evidence"
+        },
+        {
+          "path": "residua-internal rcc conformance record RCC_FORMAL_PROOF_REGISTRY_V1.json (not included)",
+          "blob_sha": "ce0a9d5b894cbef7500b0908d13ff128a057b18d",
+          "authority": "closure_status"
+        },
+        {
+          "path": "RCC/FormalCore.lean (residua-labs/RCC)",
+          "blob_sha": "dc0e311bd0b7985283dc7b12c3796e87e9f5ca7a",
+          "authority": "lean_closure_core"
+        }
+      ]
+    },
+    "iet_theory_reference": {
+      "repository": "minustwo/inferential-equilibrium-theory",
+      "commit": "445372726924661e2b01e0e7bb46b623259d1707",
+      "artifacts": [
+        {
+          "path": "MASTER_INDEX.md",
+          "blob_sha": "1386733c2cb6716ef7d36afa33c809bad589de7a",
+          "authority": "canonical_inventory"
+        },
+        {
+          "path": "conjectures/ie_conjectures.md",
+          "blob_sha": "0ba2ac4712125a63c41641784329086885e97117",
+          "authority": "semantic_reference_not_proof"
+        }
+      ]
+    },
+    "crt_theory_reference": {
+      "repository": "minustwo/market-structure-theory",
+      "commit": "a444902be44644fa11c7a67ec4d6b6953038b2c8",
+      "artifacts": [
+        {
+          "path": "papers/crt/CRT_STACK_INTERFACE_v0_2.md",
+          "blob_sha": "b33c972d114abb28e7c6fb621a63d83f3c009746",
+          "authority": "theory_reference"
+        },
+        {
+          "path": "papers/crt/IET_OPEN_INTERFACE_v0_2.md",
+          "blob_sha": "e51013c9ed89dc53b320d76545e890d470c5c391",
+          "authority": "crt_sei_reference"
+        },
+        {
+          "path": "papers/attack-escape/INSTITUTION_INTERFACE_NOTE_v0_2.md",
+          "blob_sha": "db4e159fbc9c160ccacf731e2b089d1d5e46c93e",
+          "authority": "institution_reference_not_iec_definition"
+        }
+      ]
+    },
+    "agent_reality_synthesis_reference": {
+      "repository": "minustwo/canonical-reality-theory",
+      "commit": "47125595bead28c3dacec353546d31ff9a07b49b",
+      "external_record": "https://zenodo.org/records/19870518",
+      "artifacts": [
+        {
+          "path": "main.tex",
+          "blob_sha": "6d203433beafb3f64491c5e952f72481850d3b54",
+          "authority": "paper_explanation_not_proof"
+        }
+      ]
+    }
+  },
+  "claim_authority_classes": {
+    "foundational_structure": "pinned MST-NF Lean",
+    "normalized_iet_crt_claims": "pinned IET-NF/CRT-NF Lean",
+    "runtime_behavior": "Residua semantics, wire, gate and receipts",
+    "closure_status": "RCC registry/refreeze",
+    "theoretical_motivation": "IET/CRT/agent-reality papers",
+    "operational_counterexamples": "pinned ADR and content-addressed ledger events"
+  },
+  "source_drift_rules": [
+    {
+      "change": "MST-NF or normalized theorem",
+      "required_disposition": "Reepoch"
+    },
+    {
+      "change": "Residua trusted semantics or q identity",
+      "required_disposition": "Halt_or_Reepoch"
+    },
+    {
+      "change": "RCC core/registry",
+      "required_disposition": "RecomputeClosureDisposition"
+    },
+    {
+      "change": "explanatory paper only",
+      "required_disposition": "ReviewSemanticProjection"
+    }
+  ],
+  "nonclaims": [
+    "No IEC-NF exists or is required yet.",
+    "No IEC ontology is frozen.",
+    "IET and CRT are references, not IEC's foundation or runtime.",
+    "RCC checks closure and does not define IEC content.",
+    "Current Residua governance is instance data, not universal law.",
+    "No global authority, consensus, or closure is assumed.",
+    "No paper claim outranks normalized Lean for mathematical truth.",
+    "The full RCC target set remains open."
+  ],
+  "next_allowed_node": "IEC-0.1 Operational Countermodel Registry"
+}

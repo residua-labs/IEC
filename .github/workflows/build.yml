@@ -1,0 +1,33 @@
+name: build
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: lake build
+        run: |
+          set -o pipefail
+          lake build 2>&1 | tee build.log
+          if grep -q "declaration uses 'sorry'" build.log; then echo "sorry found"; exit 1; fi
+      - name: Axiom summary
+        run: lake env lean --run scripts/PrintAxioms.lean | tee axioms.txt
+      - name: No sorry
+        run: |
+          if grep -q 'sorryAx\|MISSING' axioms.txt; then echo "sorryAx or missing headline"; exit 1; fi
+          grep -q '^non-standard axiom uses: 0$' axioms.txt
+          # source check, ignoring line comments and /- ... -/ block comments
+          for f in $(find IEC Conflux IECTests -name '*.lean'); do
+            perl -0777 -pe 's{/-.*?-/}{}gs; s{--[^\n]*}{}g' "$f" \
+              | grep -nP '\bsorry\b|(^\s*|\bby\s+|[;<]\s*)admit\b(?!\s*:)|^\s*axiom\b|native_decide|implemented_by' \
+              && { echo "forbidden construct in $f"; exit 1; }
+          done
+          echo ok

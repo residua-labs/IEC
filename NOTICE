@@ -1,0 +1,8 @@
+IEC
+Copyright 2026 Residua Labs contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It depends on, but does not include, RCC
+(https://github.com/residua-labs/RCC), licensed under the Apache License,
+Version 2.0.
