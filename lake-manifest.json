@@ -1,0 +1,15 @@
+{"version": "1.1.0",
+ "packagesDir": ".lake/packages",
+ "packages":
+ [{"url": "https://github.com/residua-labs/RCC",
+   "type": "git",
+   "subDir": null,
+   "scope": "",
+   "rev": "0f7f5f39ff36f8f21c13e649c35127c235ab3df6",
+   "name": "RCC",
+   "manifestFile": "lake-manifest.json",
+   "inputRev": "0f7f5f39ff36f8f21c13e649c35127c235ab3df6",
+   "inherited": false,
+   "configFile": "lakefile.lean"}],
+ "name": "IEC",
+ "lakeDir": ".lake"}
