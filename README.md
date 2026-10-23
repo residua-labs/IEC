@@ -1,5 +1,7 @@
 # IEC — institutional cuts (Lean 4 formalization)
 
+> **Release status (2026-10-23):** pre-release research mirror. It is **not** part of the first Residua release (bootstrap 1.0 + R-CIC) and is not being expanded until it is closed. See [residua-labs/Residua](https://github.com/residua-labs/Residua) for release status.
+
 Machine-checked Lean 4 modules for **IEC**, the institutional-cut layer of the
 Residua project, extracted from Residua for public release.
 
