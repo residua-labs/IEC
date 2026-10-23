@@ -1,6 +1,26 @@
-# IEC — institutional cuts (Lean 4 formalization)
+# IEC — institutional cuts
 
-> **Release status (2026-10-23):** pre-release research mirror. It is **not** part of the first Residua release (bootstrap 1.0 + R-CIC) and is not being expanded until it is closed. See [residua-labs/Residua](https://github.com/residua-labs/Residua) for release status.
+**English** · [中文](README.zh-CN.md)
+
+**When may an institution change its own history, rules or authority, and how can anyone check that the change was admissible?**
+
+## Why
+
+Institutions change themselves: a protocol forks, an organisation re-founds, a fleet of agents replaces its governance rules. Such a change is a *cut* of the institution's history, with a successor, possibly a new genesis, and a disposition of what came before. Done informally, a cut is where authority is silently rewritten and history quietly reinterpreted.
+
+IEC makes a cut an object that can be admitted or refused:
+- it is normalized directly against [MST-NF](https://github.com/residua-labs/MST-NF);
+- its closure is computed by [RCC](https://github.com/residua-labs/RCC) relative to a supplied, cut-bound context;
+- a cut that is not admissible returns a typed non-closure (`Await`, `Reepoch`, address refusal, …), never a silent acceptance.
+
+Residua's own governance, in which rule changes go through logic and a non-proposer quorum rather than a person's signature, is the kind of institution IEC is meant to describe. IEC is also the second application of the formal-theory construction method that produced RCC: it tests whether that method generalizes.
+
+## Status, stated exactly
+
+- **Research mirror.** IEC is **not** part of Residua's release closure, and it is not being expanded until it is closed. `closure_claim = 0`.
+- Only IEC-T003 (bounded-profile factorization) and the relative-complete-closure packet are discharged here. The other theorem targets (`IEC-T001` … `IEC-T038`) are fixed in `docs/` as targets, not results.
+
+## Contents
 
 Machine-checked Lean 4 modules for **IEC**, the institutional-cut layer of the
 Residua project, extracted from Residua for public release.
